@@ -6,11 +6,13 @@ class CustomText extends StatelessWidget {
   double size;
   FontWeight weight;
   TextOverflow overFlow;
+  int textMaxLines;
   CustomText(
       {super.key,
       this.color=const Color(0x00000000),
       required this.text,
       this.overFlow = TextOverflow.ellipsis,
+      this.textMaxLines = 1,
       this.size = 20,
       this.weight = FontWeight.normal});
 
@@ -18,7 +20,7 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      maxLines: 1,
+      maxLines: textMaxLines,
       overflow: overFlow,
       style: TextStyle(
           fontFamily: 'Roboto',
