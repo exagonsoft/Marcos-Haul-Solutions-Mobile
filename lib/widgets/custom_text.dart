@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:marcos_haull_solutions/utils/dimensions.dart';
 
+// ignore: must_be_immutable
 class CustomText extends StatelessWidget {
   Color? color;
   final String text;
@@ -13,7 +15,7 @@ class CustomText extends StatelessWidget {
       required this.text,
       this.overFlow = TextOverflow.ellipsis,
       this.textMaxLines = 1,
-      this.size = 20,
+      this.size = 0,
       this.weight = FontWeight.normal});
 
   @override
@@ -25,7 +27,7 @@ class CustomText extends StatelessWidget {
       style: TextStyle(
           fontFamily: 'Roboto',
           color: color,
-          fontSize: size,
+          fontSize: size==0 ? APPDimensions.height20 : size,
           fontWeight: weight),
     );
   }

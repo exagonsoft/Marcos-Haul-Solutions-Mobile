@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:marcos_haull_solutions/home/main_home_body.dart';
+import 'package:marcos_haull_solutions/langs/langs.dart';
 import 'package:marcos_haull_solutions/utils/colors.dart';
+import 'package:marcos_haull_solutions/utils/dimensions.dart';
 import 'package:marcos_haull_solutions/widgets/custom_icon.dart';
 import 'package:marcos_haull_solutions/widgets/custom_text.dart';
 
@@ -18,8 +20,8 @@ class _MainHomePageState extends State<MainHomePage> {
       body: Column(
         children: [
           Container(
-            height: 50,
-            margin: const EdgeInsets.only(top: 50, bottom: 15),
+            height: APPDimensions.height50,
+            margin: EdgeInsets.only(top: APPDimensions.height50, bottom: APPDimensions.height15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -28,18 +30,18 @@ class _MainHomePageState extends State<MainHomePage> {
                 CustomIcon(
                   icon: Icons.newspaper_outlined,
                   iconColor: AppColors.primaryColor,
-                  iconSize: 30,
+                  iconSize: APPDimensions.height30,
                 ),
                 CustomText(
-                  text: "Most Relevant",
+                  text: AppLangs.langs['en']['homePageUI']['title'],
                   color: AppColors.blackTextColor,
                   weight: FontWeight.bold,
-                  size: 30,
+                  size: APPDimensions.height30,
                 )
               ],
             ),
           ),
-          MainHomeBody(),
+          const MainHomeBody(),
         ],
       ),
     );

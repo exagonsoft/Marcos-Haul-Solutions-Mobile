@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomIcon extends StatelessWidget {
   final IconData icon;
   double iconSize;
