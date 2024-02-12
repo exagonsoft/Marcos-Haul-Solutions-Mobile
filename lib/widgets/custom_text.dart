@@ -3,7 +3,7 @@ import 'package:marcos_haull_solutions/utils/dimensions.dart';
 
 // ignore: must_be_immutable
 class CustomText extends StatelessWidget {
-  Color? color;
+  Color color;
   final String text;
   double size;
   FontWeight weight;
