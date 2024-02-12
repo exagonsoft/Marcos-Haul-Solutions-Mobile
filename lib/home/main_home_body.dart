@@ -104,7 +104,8 @@ class _MainHomeBodyState extends State<MainHomeBody> {
             margin: EdgeInsets.only(
                 left: APPDimensions.width20,
                 right: APPDimensions.width20,
-                bottom: APPDimensions.height10),
+                bottom: APPDimensions.height10,
+                top: APPDimensions.height10),
             child: Row(children: [
               //Event Image Section
               Container(
@@ -161,7 +162,7 @@ class _MainHomeBodyState extends State<MainHomeBody> {
                         ),
                         CustomText(
                               text: "The next Febrary 20 we will be in sheduled maintaince for all of our equipment.",
-                              textMaxLines: 3,
+                              textMaxLines: 2,
                               weight: FontWeight.normal,
                               size: APPDimensions.height15,
                               color: AppColors.blackTextColor,
