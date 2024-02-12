@@ -1,6 +1,6 @@
-
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:marcos_haull_solutions/langs/langs.dart';
 import 'package:marcos_haull_solutions/utils/colors.dart';
 import 'package:marcos_haull_solutions/utils/dimensions.dart';
 import 'package:marcos_haull_solutions/widgets/custom_icon.dart';
@@ -19,7 +19,6 @@ class _MainHomeBodyState extends State<MainHomeBody> {
   final double _scaleFactor = 0.8;
   final double _height = APPDimensions.height220;
 
-  
   @override
   void initState() {
     super.initState();
@@ -41,7 +40,8 @@ class _MainHomeBodyState extends State<MainHomeBody> {
     return Column(children: [
       Container(
         height: APPDimensions.height320,
-        margin: EdgeInsets.only(top: APPDimensions.height20, bottom: APPDimensions.height5),
+        margin: EdgeInsets.only(
+            top: APPDimensions.height20, bottom: APPDimensions.height5),
         child: PageView.builder(
             controller: homeBodyController,
             itemCount: 5,
@@ -55,10 +55,126 @@ class _MainHomeBodyState extends State<MainHomeBody> {
         decorator: DotsDecorator(
           size: Size.square(APPDimensions.height10),
           activeSize: Size(APPDimensions.width20, APPDimensions.height10),
-          activeShape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(APPDimensions.height5)),
+          activeShape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(APPDimensions.height5)),
         ),
       ),
+      SizedBox(height: APPDimensions.height40),
+      //Future Events Headder
+      Container(
+        margin: EdgeInsets.only(left: APPDimensions.width20),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CustomText(
+              text: AppLangs.langs['en']['homePageUI']['outcoming'],
+              textMaxLines: 1,
+              color: AppColors.blackTextColor,
+              weight: FontWeight.bold,
+              size: APPDimensions.height20,
+            ),
+            SizedBox(
+              width: APPDimensions.height15,
+            ),
+            CustomText(
+              text: "-",
+              color: AppColors.textColor,
+              size: APPDimensions.width10,
+            ),
+            SizedBox(
+              width: APPDimensions.height15,
+            ),
+            CustomText(
+              text: AppLangs.langs['en']['homePageUI']['outcomingDescription'],
+              textMaxLines: 1,
+              color: AppColors.textColor,
+              weight: FontWeight.normal,
+              size: APPDimensions.width10,
+            ),
+          ],
+        ),
+      ),
+      //Future Events List
+      SizedBox(
+        child: ListView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: 10,
+          itemBuilder: (context, index) => Container(
+            margin: EdgeInsets.only(
+                left: APPDimensions.width20,
+                right: APPDimensions.width20,
+                bottom: APPDimensions.height10),
+            child: Row(children: [
+              //Event Image Section
+              Container(
+                width: APPDimensions.width120,
+                height: APPDimensions.height120,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(APPDimensions.height20),
+                    color: Colors.white38,
+                    image: const DecorationImage(
+                        image: AssetImage("assets/images/banner6.webp"),
+                        fit: BoxFit.cover)),
+              ),
+              //Event Text Section
+              Expanded(
+                child: Container(
+                  height: APPDimensions.height100,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                        topRight: Radius.circular(APPDimensions.height20),
+                        bottomRight: Radius.circular(APPDimensions.height20)),
+                    color: Colors.white,
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: APPDimensions.width10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            CustomIcon(
+                              icon: Icons.calendar_month_outlined,
+                              iconSize: APPDimensions.height20,
+                              iconColor: Colors.blue,
+                            ),
+                            CustomText(
+                              text: "Febrary 20",
+                              textMaxLines: 1,
+                              weight: FontWeight.bold,
+                              size: APPDimensions.height20,
+                              color: AppColors.blackTextColor,
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            CustomText(
+                              text: "Truk Mainteining",
+                              textMaxLines: 1,
+                              weight: FontWeight.bold,
+                              size: APPDimensions.height20,
+                              color: AppColors.blackTextColor,
+                            ),
+                          ],
+                        ),
+                        CustomText(
+                              text: "The next Febrary 20 we will be in sheduled maintaince for all of our equipment.",
+                              textMaxLines: 3,
+                              weight: FontWeight.normal,
+                              size: APPDimensions.height15,
+                              color: AppColors.blackTextColor,
+                            ),
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            ]),
+          ),
+        ),
+      )
     ]);
   }
 
@@ -93,7 +209,8 @@ class _MainHomeBodyState extends State<MainHomeBody> {
       child: Stack(children: [
         Container(
           height: APPDimensions.height220,
-          margin: EdgeInsets.only(left: APPDimensions.width10, right: APPDimensions.width10),
+          margin: EdgeInsets.only(
+              left: APPDimensions.width10, right: APPDimensions.width10),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(APPDimensions.height30),
               color: AppColors.secondaryColor,
@@ -105,7 +222,10 @@ class _MainHomeBodyState extends State<MainHomeBody> {
           alignment: Alignment.bottomCenter,
           child: Container(
             height: APPDimensions.height100,
-            margin: EdgeInsets.only(left: APPDimensions.width30, right: APPDimensions.width30, bottom: APPDimensions.height30),
+            margin: EdgeInsets.only(
+                left: APPDimensions.width30,
+                right: APPDimensions.width30,
+                bottom: APPDimensions.height30),
             padding: EdgeInsets.all(APPDimensions.height10),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(APPDimensions.height20),
@@ -141,7 +261,6 @@ class _MainHomeBodyState extends State<MainHomeBody> {
                     )
                   ],
                 ),
-                const Spacer(),
                 CustomText(
                   text:
                       "We where joking while haulling a huge pile of tree branches and solid garbage in Miami DownTown Lolitas Storage.",

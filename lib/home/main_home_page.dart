@@ -21,7 +21,8 @@ class _MainHomePageState extends State<MainHomePage> {
         children: [
           Container(
             height: APPDimensions.height50,
-            margin: EdgeInsets.only(top: APPDimensions.height50, bottom: APPDimensions.height15),
+            margin: EdgeInsets.only(
+                top: APPDimensions.height50, bottom: APPDimensions.height15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -41,7 +42,9 @@ class _MainHomePageState extends State<MainHomePage> {
               ],
             ),
           ),
-          const MainHomeBody(),
+          const Expanded(
+              child: SingleChildScrollView(
+                  child: MainHomeBody())),
         ],
       ),
     );
