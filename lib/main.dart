@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:marcos_haull_solutions/home/main_home_page.dart';
+import 'package:marcos_haull_solutions/pages/home/main_home_page.dart';
+import 'package:marcos_haull_solutions/pages/posts/future_events_details.dart';
 import 'package:marcos_haull_solutions/utils/colors.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
         useMaterial3: true,
       ),
-      home: const MainHomePage(),
+      home: const FutureEventsDetails(),
     );
   }
 }

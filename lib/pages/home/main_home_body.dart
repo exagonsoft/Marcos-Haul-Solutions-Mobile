@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:marcos_haull_solutions/langs/langs.dart';
+import 'package:marcos_haull_solutions/mockData/mock_data.dart';
 import 'package:marcos_haull_solutions/utils/colors.dart';
 import 'package:marcos_haull_solutions/utils/dimensions.dart';
 import 'package:marcos_haull_solutions/widgets/custom_icon.dart';
@@ -105,12 +106,12 @@ class _MainHomeBodyState extends State<MainHomeBody> {
                 left: APPDimensions.width20,
                 right: APPDimensions.width20,
                 bottom: APPDimensions.height10,
-                top: APPDimensions.height10),
+                top: APPDimensions.height20),
             child: Row(children: [
               //Event Image Section
               Container(
                 width: APPDimensions.width120,
-                height: APPDimensions.height120,
+                height: APPDimensions.width120,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(APPDimensions.height20),
                     color: Colors.white38,
@@ -263,8 +264,7 @@ class _MainHomeBodyState extends State<MainHomeBody> {
                   ],
                 ),
                 CustomText(
-                  text:
-                      "We where joking while haulling a huge pile of tree branches and solid garbage in Miami DownTown Lolitas Storage.",
+                  text: MockData.mockData['post1'],
                   textMaxLines: 2,
                   size: APPDimensions.height15,
                   color: AppColors.textColor,

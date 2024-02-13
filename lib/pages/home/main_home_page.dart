@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marcos_haull_solutions/home/main_home_body.dart';
+import 'package:marcos_haull_solutions/pages/home/main_home_body.dart';
 import 'package:marcos_haull_solutions/langs/langs.dart';
 import 'package:marcos_haull_solutions/utils/colors.dart';
 import 'package:marcos_haull_solutions/utils/dimensions.dart';
